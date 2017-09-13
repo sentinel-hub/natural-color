@@ -37,6 +37,19 @@ You can try out the algorithms we've proposed via [Sentinel Playground](apps.sen
 
 All natural-color algorithms have been implemented as ready-to-use custom scripts (under `./scripts/`) that you can copy-and-paste into Sentinel Playground and/or EO Browser. Needless to say, you can also fiddle with the code!
 
+Location name | Level | Date | Coordinates | EO Browser
+:------------:|:-----:|:----:|:-----------:|:----------:
+Mount Bromo (Indonesia) | 1C | August 9, 2016 | 7.96° S 113.00° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=-7.964377531436546&lng=112.9960584640503&zoom=14&datasource=Sentinel-2%20L1C&time=2016-08-09&preset=1_TRUE_COLOR)
+dunes (Saudi Arabia) | 1C | September 7, 2017 | 19.57° N 48.63° E | [URL](\href{http://apps.sentinel-hub.com/eo-browser/#lat=19.574347451922222&lng=48.62617492675781&zoom=12&datasource=Sentinel-2%20L1C&time=2017-09-07&preset=1_TRUE_COLOR)
+Venice (Italy) | 1C | July 3, 2017 | 45.50° N 12.20° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=45.49816553360498&lng=12.196369171142578&zoom=12&datasource=Sentinel-2%20L1C&time=2017-07-03&preset=1_TRUE_COLOR)
+Carrizo Plain (California, USA) | 1C | March 28, 2017 | 35.05° N 120.00° W | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=35.05&lng=-119.89999999999998&zoom=12&datasource=Sentinel-2%20L1C&time=2017-03-28&preset=1_TRUE_COLOR)
+Amposta (Spain) | 1C | August 4, 2017 | 40.67° N 0.58° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=40.670222795307346&lng=0.5790138244628906&zoom=12&datasource=Sentinel-2%20L1C&time=2017-08-04&preset=1_TRUE_COLOR)
+Izmir (Turkey) | 1C | September 7, 2017 | 38.54° N 27.08° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=38.53903559101298&lng=27.077178955078125&zoom=11&datasource=Sentinel-2%20L1C&time=2017-08-31&preset=1_TRUE_COLOR)
+Venice (Italy) | 2A | July 3, 2017 | 45.50° N 12.20° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=45.49816553360498&lng=12.196369171142578&zoom=12&datasource=Sentinel-2%20L2A&time=2017-07-03&preset=1_TRUE_COLOR)
+Amposta (Spain) | 2A | August 4, 2017 | 40.67° N 0.58° E | [URL](http://apps.sentinel-hub.com/eo-browser/#lat=40.670222795307346&lng=0.5790138244628906&zoom=12&datasource=Sentinel-2%20L2A&time=2017-08-04&preset=1_TRUE_COLOR)
+
+Listing of Sentinel-2 data used throughout the article. Locations, their acquisition dates and links to  [EO Browser](https://apps.sentinel-hub.com/eo-browser/) where user can reproduce the results from the article using JavaScript algorithms provided in the supplementary material.
+
 For convenience we've collected the algorithms into a table with links where you can view them interactively in Sentinel Playground and/or EO Browser.
 
 ### List of procedures
