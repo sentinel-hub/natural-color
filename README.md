@@ -29,7 +29,7 @@ True color | Natural color
 ![](./figures/carrizo/true_color.jpg) Carrizo Plain National Monument | ![](./figures/carrizo/3x3_aster_proper_gamma_solar.jpg) Carrizo Plain National Monument
 ![](./figures/izmir/true_color.jpg) Izmir, Turkey | ![](./figures/izmir/3x3_aster_proper_gamma_solar.jpg) Izmir, Turkey
 ![](./figures/amposta/l1c_true_color.jpg) Amposta, Spain | ![](./figures/amposta/l1c_3x3_aster_proper_gamma_solar.jpg) Amposta, Spain
-![](./figures/venice/l1c_true_color.jpg) Venice, Italy | ![](./figures/venice/3x3_aster_proper_gamma_solar.jpg) Venice, Italy
+![](./figures/venice/l1c_true_color.jpg) Venice, Italy | ![](./figures/venice/l1c_3x3_aster_proper_gamma_solar.jpg) Venice, Italy
 
 ## Interactive examples
 
