@@ -17,10 +17,17 @@ African mosaic                                 | NASA Blue Marble
 ![](figures/African_mosaic_ESA.jpg) (c) ESA; Brockmann Consult; Université catholique de Louvain              | ![](figures/Blue_Marble_NG_July_2004_Africa.jpg) (c) NASA
 -->
 
-Our key contributions are threefold.
+Highlight of our contributions:
+* We define the natural color product as the one matching the color perceived by the human eye.
+* We propose two approaches for designing efficient algorithms for computing natural color.
+* We implement and demonstrate several efficient algorithms for computing the natural color.
+* We advocate correct sRGB encoding when preparing images for digital display.
+* We urge that levels adjustment always be applied in the CIE LAB space.
+
+<!-- Our key contributions are threefold.
 1. In this work we define a _natural color product_ as the product that approximates the color that the human eye would sense from Sentinel-2 responses and propose two computationally efficient approaches for computing the natural color.
 2. We argue that one should use the [non-linear sRGB transfer function](https://en.wikipedia.org/wiki/SRGB#The_sRGB_transfer_function_.28.22gamma.22.29) when encoding digital images; we find that most satellite images on the web as well as numerous image processing platforms fail to take this into account.
-3. As a side note, we recommend that levels adjustment be performed in color spaces where color's visual characteristics that one is improving are represented independently of each other.
+3. As a side note, we recommend that levels adjustment be performed in color spaces where color's visual characteristics that one is improving are represented independently of each other. -->
 
 The images below showcase the default true color (left) and the natural color (right) that we propose in our work.
 
