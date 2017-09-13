@@ -1,6 +1,7 @@
 # Natural color representation of Sentinel-2 data
 
-This repository contains supplementary material for our paper, _Natural color representation of Sentinel-2 data_.
+This repository contains supplementary material for our paper:
+&nbsp;&nbsp;&nbsp;&nbsp; B. Sovdat, M. Kadunc, M. Batič, G. Milčinski, _Natural color representation of Sentinel-2 data_. Submitted.
 
 ## Introduction
 
@@ -82,6 +83,9 @@ XI | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_no_gamma.js`](./sc
 XII | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`default_3x3_naive_gamma.js`](./scripts/default_3x3_naive_gamma.js) | TODO
 XIII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_proper_gamma.js`](./scripts/default_3x3_proper_gamma.js) | TODO
 XIV | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_no_gamma.js`](./scripts/default_3x3_no_gamma.js) | TODO
+
+## Data
+We used the [ASTER spectral library](https://speclib.jpl.nasa.gov/) extensively for our experiments. The file [`used_aster_spectra.txt`](./data/used_aster_spectra.txt) contains the list of ASTER spectra used for fitting the mappings with least-squares method (described in detail in Subsection 2.1 of the paper).
 
 ## Gallery
 TODO
