@@ -1,6 +1,6 @@
 # Natural color representation of Sentinel-2 data
 
-This repository contains supplementary material for our paper [_Natural color representation of Sentinel-2 data_](http://arxiv.org/...).
+This repository contains supplementary material for our paper, _Natural color representation of Sentinel-2 data_.
 
 ## Introduction
 
