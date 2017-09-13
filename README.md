@@ -72,9 +72,9 @@ VIII | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x3_no_gamma.js`](./
 IX | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`basis_3x4_naive_gamma.js`](./scripts/basis_3x4_naive_gamma.js) | TODO
 X | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_proper_gamma.js`](./scripts/basis_3x4_proper_gamma.js) | TODO
 XI | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_no_gamma.js`](./scripts/basis_3x4_no_gamma.js) | TODO
-XII | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | TODO | TODO
-XIII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | TODO | TODO
-XIV | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | TODO | TODO
+XII | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`default_3x3_naive_gamma.js`](./scripts/default_3x3_naive_gamma.js) | TODO
+XIII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_proper_gamma.js`](./scripts/default_3x3_proper_gamma.js) | TODO
+XIV | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_no_gamma.js`](./scripts/default_3x3_no_gamma.js) | TODO
 
 ## Gallery
 TODO
