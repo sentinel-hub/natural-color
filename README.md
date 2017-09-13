@@ -6,30 +6,16 @@ This repository contains supplementary material for our paper:
 
 ## Introduction
 
-The true color image---defined as an image that strives to offer a natural color rendition of a scene---is one of the most widely used [Earth observation](https://en.wikipedia.org/wiki/Earth_observation) products. In the context of satellite imagery, the true color should represent spectral responses of the satellite bands so as to match the color perceived by the human eye. However, most true color satellite products fail to achieve this.
+The true color image &mdash; defined as an image that strives to offer a natural color rendition of a scene &mdash; is one of the most widely used [Earth observation](https://en.wikipedia.org/wiki/Earth_observation) products. In the context of satellite imagery, the true color should represent spectral responses of the satellite bands so as to match the color perceived by the human eye. However, most true color satellite products fail to achieve this.
 
-When it comes to [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)---an optical mission part of [European Space Agency](http://www.esa.int/ESA)'s [Copernicus Program](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus)---the state-of-the-art true color products map [Sentinel-2 MSI](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument) bands B4, B3, and B2 directly to [sRGB](https://en.wikipedia.org/wiki/SRGB) components R, G, and B, respectively (sometimes with additional gain and gamma corrections in the sRGB space). This results in images with overly saturated and sometimes unrealistic colors.
+When it comes to [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) &mdash; an optical mission part of [European Space Agency](http://www.esa.int/ESA)'s [Copernicus Program](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus) &mdash; the state-of-the-art true color products map [Sentinel-2 MSI](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument) bands B4, B3, and B2 directly to [sRGB](https://en.wikipedia.org/wiki/SRGB) components R, G, and B, respectively (sometimes with additional gain and gamma corrections in the sRGB space). This results in images with overly saturated and sometimes unrealistic colors.
 
-
-<!--
-The images below illustrate this. On the left is a true color composite of Africa, taken from [ESA Space in Images](http://www.esa.int/spaceinimages/Images/2016/05/African_mosaic); on the right is the same scene processed by NASA from MODIS data.
-
-African mosaic                                 | NASA Blue Marble
-:------------------------------------------------:|:----------------:
-![](figures/African_mosaic_ESA.jpg) (c) ESA; Brockmann Consult; Université catholique de Louvain              | ![](figures/Blue_Marble_NG_July_2004_Africa.jpg) (c) NASA
--->
-
-Highlight of our contributions:
+Highlights of our contributions:
 * We define the natural color product as the one matching the color perceived by the human eye.
 * We propose two approaches for designing efficient algorithms for computing natural color.
 * We implement and demonstrate several efficient algorithms for computing the natural color.
 * We advocate correct sRGB encoding when preparing images for digital display.
 * We urge that levels adjustment always be applied in the CIE LAB space.
-
-<!-- Our key contributions are threefold.
-1. In this work we define a _natural color product_ as the product that approximates the color that the human eye would sense from Sentinel-2 responses and propose two computationally efficient approaches for computing the natural color.
-2. We argue that one should use the [non-linear sRGB transfer function](https://en.wikipedia.org/wiki/SRGB#The_sRGB_transfer_function_.28.22gamma.22.29) when encoding digital images; we find that most satellite images on the web as well as numerous image processing platforms fail to take this into account.
-3. As a side note, we recommend that levels adjustment be performed in color spaces where color's visual characteristics that one is improving are represented independently of each other. -->
 
 The images below showcase the default true color (left) and the natural color (right) that we propose in our work.
 
@@ -68,31 +54,22 @@ For convenience we've collected the algorithms into a table with links where you
 
 The table below summarizes each of the procedures used in the paper.
 
-Procedure | Shorthand description | Custom script |  Demo URL
-:---:|:------------------:|:------:|:---------------:
-I | `DN -> sRGB` | [`true_color.js`](./scripts/true_color.js) | TODO
-II | `DN -> S2 -> sRGB*_lin -> sRGB_8bit` | [`aster_3x4_naive_gamma.js`](./scripts/aster_3x4_naive_gamma.js) | TODO
-III | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x4_proper_gamma.js`](./scripts/aster_3x4_proper_gamma.js) | TODO
-IV | `DN -> S2 -> XYZ -> sRBG_lin -> sRGB_8bit` | [`aster_3x4_no_gamma`](./scripts/aster_3x4_no_gamma.js) | TODO
-V | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`aster_3x3_naive_gamma_I.js`](./scripts/aster_3x3_naive_gamma_I.js) | TODO
-VI | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`aster_3x3_naive_gamma.js`](./scripts/aster_3x3_naive_gamma.js) | TODO
-VII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x3_proper_gamma.js`](./scripts/aster_3x3_proper_gamma.js) | TODO
-VIII | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x3_no_gamma.js`](./scripts/aster_3x3_no_gamma.js) | TODO
-IX | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`basis_3x4_naive_gamma.js`](./scripts/basis_3x4_naive_gamma.js) | TODO
-X | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_proper_gamma.js`](./scripts/basis_3x4_proper_gamma.js) | TODO
-XI | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_no_gamma.js`](./scripts/basis_3x4_no_gamma.js) | TODO
-XII | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`default_3x3_naive_gamma.js`](./scripts/default_3x3_naive_gamma.js) | TODO
-XIII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_proper_gamma.js`](./scripts/default_3x3_proper_gamma.js) | TODO
-XIV | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_no_gamma.js`](./scripts/default_3x3_no_gamma.js) | TODO
+Procedure | Shorthand description | Custom script
+:---:|:------------------:|:------:|
+I | `DN -> sRGB` | [`true_color.js`](./scripts/true_color.js)
+II | `DN -> S2 -> sRGB*_lin -> sRGB_8bit` | [`aster_3x4_naive_gamma.js`](./scripts/aster_3x4_naive_gamma.js)
+III | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x4_proper_gamma.js`](./scripts/aster_3x4_proper_gamma.js)
+IV | `DN -> S2 -> XYZ -> sRBG_lin -> sRGB_8bit` | [`aster_3x4_no_gamma`](./scripts/aster_3x4_no_gamma.js)
+V | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`aster_3x3_naive_gamma_I.js`](./scripts/aster_3x3_naive_gamma_I.js)
+VI | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`aster_3x3_naive_gamma.js`](./scripts/aster_3x3_naive_gamma.js)
+VII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x3_proper_gamma.js`](./scripts/aster_3x3_proper_gamma.js)
+VIII | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`aster_3x3_no_gamma.js`](./scripts/aster_3x3_no_gamma.js)
+IX | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`basis_3x4_naive_gamma.js`](./scripts/basis_3x4_naive_gamma.js)
+X | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_proper_gamma.js`](./scripts/basis_3x4_proper_gamma.js)
+XI | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`basis_3x4_no_gamma.js`](./scripts/basis_3x4_no_gamma.js)
+XII | `DN -> S2 -> XYZ -> sRGB*_lin -> sRGB_8bit` | [`default_3x3_naive_gamma.js`](./scripts/default_3x3_naive_gamma.js)
+XIII | `DN -> S2 -> XYZ -> LAB* -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_proper_gamma.js`](./scripts/default_3x3_proper_gamma.js)
+XIV | `DN -> S2 -> XYZ -> sRGB_lin -> sRGB_8bit` | [`default_3x3_no_gamma.js`](./scripts/default_3x3_no_gamma.js)
 
 ## Data
 We used the [ASTER spectral library](https://speclib.jpl.nasa.gov/) extensively for our experiments. The file [`used_aster_spectra.txt`](./data/used_aster_spectra.txt) contains the list of ASTER spectra used for fitting the mappings with least-squares method (described in detail in Subsection 2.1 of the paper).
-
-## Gallery
-TODO
-
-## Citing
-BibTeX:
-```
-TODO
-```
