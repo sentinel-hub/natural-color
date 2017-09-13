@@ -1,6 +1,7 @@
 # Natural color representation of Sentinel-2 data
 
 This repository contains supplementary material for our paper:
+
 &nbsp;&nbsp;&nbsp;&nbsp; B. Sovdat, M. Kadunc, M. Batič, G. Milčinski, _Natural color representation of Sentinel-2 data_. Submitted.
 
 ## Introduction
