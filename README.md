@@ -6,7 +6,7 @@ This repository contains supplementary material for our paper:
 
 ## Introduction
 
-The true color image &mdash; defined as an image that strives to offer a natural color rendition of a scene &mdash; is one of the most widely used [Earth observation](https://en.wikipedia.org/wiki/Earth_observation) products. In the context of satellite imagery, the true color should represent spectral responses of the satellite bands so as to match the color perceived by the human eye. However, most true color satellite products fail to achieve this.
+The true color image &mdash; defined as an image that strives to offer a natural color rendition of a scene &mdash; is one of the most widely used [Earth observation](https://en.wikipedia.org/wiki/Earth_observation) products. In the context of satellite imagery, the true color should represent spectral responses of the satellite bands so as to match the [color perceived by the human eye](https://en.wikipedia.org/wiki/Color_vision). However, most true color satellite products fail to achieve this.
 
 When it comes to [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) &mdash; an optical mission part of [European Space Agency](http://www.esa.int/ESA)'s [Copernicus Program](http://www.esa.int/Our_Activities/Observing_the_Earth/Copernicus) &mdash; the state-of-the-art true color products map [Sentinel-2 MSI](https://earth.esa.int/web/sentinel/technical-guides/sentinel-2-msi/msi-instrument) bands B4, B3, and B2 directly to [sRGB](https://en.wikipedia.org/wiki/SRGB) components R, G, and B, respectively (sometimes with additional gain and gamma corrections in the sRGB space). This results in images with overly saturated and sometimes unrealistic colors.
 
