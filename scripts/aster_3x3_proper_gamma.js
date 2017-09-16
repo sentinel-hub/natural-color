@@ -75,14 +75,6 @@ function getSolarIrr(dim) {
   }
 }
 
-function getD65Irr(dim) {
-  if (dim == 4) {
-    return [0.989*B01, B02, 0.910*B03, 0.732*B04];
-  } else {
-    return [B02, 0.910*B03, 0.732*B04];
-  }
-}
-
 function S2_to_XYZ(rad, T, gain) {
   return dotVS(dotMV(T, rad), gain);
 }
