@@ -1,4 +1,4 @@
- function sum(a, b) {
+function sum(a, b) {
     return a + b;
 }
 
@@ -67,12 +67,8 @@ function Lab_to_sRGB(Lab) {
   return XYZ_to_sRGB(Lab_to_XYZ(Lab));
 }
 
-function getSolarIrr(dim) {
-  if (dim == 4) {
-    return [0.986*B01, B02, 0.939*B03, 0.779*B04];
-  } else {
+function getSolarIrr() {
     return [B02, 0.939*B03, 0.779*B04];
-  }
 }
 
 function S2_to_XYZ(rad, T, gain) {
@@ -95,6 +91,5 @@ var T = [
 // Gamma and gain parameters
 var gain = 2.5;
 var gammaAdj = 2.2;
-var gainL = 1;
 
-return NaiveGamma_S2_to_sRGB_with_I(getSolarIrr(3), T, gain, gammaAdj);
+return NaiveGamma_S2_to_sRGB_with_I(getSolarIrr(), T, gain, gammaAdj);
